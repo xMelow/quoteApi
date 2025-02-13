@@ -23,6 +23,13 @@ const initDB = async () => {
             text TEXT NOT NULL
         );
     `);
+
+    await db.exec(`
+        CREATE TABLE IF NOT EXISTS state (
+            key TEXT PRIMARY KEY,
+            value TEXT
+        );
+    `);
 };
 
 const getQuoteOfTheDay = async () => {
