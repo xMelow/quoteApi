@@ -12,7 +12,7 @@ let db;
 
 const initDB = async () => {
     db = await open({
-        filename: "./quotes.db",
+        filename: "quotes.db",
         driver: sqlite3.Database
     });
 
